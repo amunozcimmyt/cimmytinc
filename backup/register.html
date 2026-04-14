@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>CIMMYT Inc Service Portal</title>
+</head>
+
+<body>
+    <header class="grid grid-cols-3 bg-white p-4">
+        <div class="logo">
+            <img class="h-16" src="img/CIMMYTIncincolor.png" alt="">
+        </div>
+        <nav>
+            <ul class="flex items-center h-16 space-x-8">
+
+                <li>
+                    <a href="index.html" class="btn-menu-header">Home</a>
+                </li>
+                <li>
+                    <a href="brochure.html" class="btn-menu-header">Service Brochure</a>
+                </li>
+                <li>
+                    <a href="brochure.html" class="btn-menu-header">Service Categories</a>
+                </li>
+                <li>
+                    <a href="brochure.html" class="btn-menu-header">Cotnact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="">
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <a href="login.html" class="btn btn-info btn-lg">
+                    Log In
+                </a>
+                <a href="register.html" class="btn btn-warning btn-lg">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col w-full">
+        <section class="flex flex-col w-full">
+            <app-sign-in class="block min-h-screen bg-gray-50 py-12 px-4 md:px-10">
+                <div class="max-w-6xl mx-auto mb-12">
+                    <div class="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-sm">
+                        <h1 class="text-3xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+                            CIMMYT Inc <span class="text-cimmyt-green">Service Portal Sign In</span>
+                        </h1>
+                        <div class="space-y-4 text-gray-600 leading-relaxed">
+                            <p class="font-medium">
+                                Use Option 1 to sign in using your CIMMYT Inc Service Portal username and password. <br
+                                    class="hidden md:block">
+                                If you signed up with a Microsoft or Google email, you can use options 2 or 3 for a
+                                faster
+                                experience
+                                <i class="fa-regular fa-face-smile text-cimmyt-gold"></i>.
+                            </p>
+                            <div class="flex gap-4 p-4 bg-green-50 rounded-2xl border border-green-100">
+                                <i data-lucide="info" class="w-6 h-6 text-cimmyt-green shrink-0"></i>
+                                <p class="text-sm italic">
+                                    Not registered yet?
+                                    <a class="text-cimmyt-green font-bold underline hover:text-green-800 transition-colors cursor-pointer"
+                                        href="/register">Register here</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+                    <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden h-fit">
+                        <div class="bg-cimmyt-marine p-6 flex items-center gap-3 text-white">
+                            <i class="fa fa-users"></i>
+                            <span class="font-bold uppercase tracking-widest text-sm">External Authentication</span>
+                        </div>
+                        <div class="p-8 md:p-10 space-y-8">
+                            <div class="flex flex-col md:flex-row items-center gap-4 group">
+                                <label
+                                    class="w-24 text-xs font-black text-cimmyt-green uppercase hidden md:block">Option
+                                    1</label>
+                                <button
+                                    class="flex-1 w-full min-w-[250px] py-3 bg-cimmyt-green text-white font-bold rounded-xl shadow-lg shadow-green-900/20 hover:bg-green-800 transition-all text-sm uppercase tracking-widest h-[52px]">
+                                    Sign in with your account
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row items-center gap-4">
+                                <label class="w-24 text-xs font-black text-gray-400 uppercase hidden md:block">Option
+                                    2</label>
+                                <button
+                                    class="flex-1 w-full min-w-[250px] py-3 border border-gray-200 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-gray-50 transition-all text-base h-[52px] shadow-sm">
+                                    <i class="fab fa-microsoft text-blue-600 text-lg"></i>
+                                    <span>Sign in with Microsoft</span>
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row items-center gap-4">
+                                <label class="w-24 text-xs font-black text-gray-400 uppercase hidden md:block">Option
+                                    3</label>
+                                <button
+                                    class="flex-1 w-full min-w-[250px] py-3 border border-gray-200 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-gray-50 transition-all text-base h-[52px] shadow-sm">
+                                    <i class="fab fa-google text-red-500 text-lg"></i>
+                                    <span>Sign in with Google</span>
+                                </button>
+                            </div>
+
+                            <div class="pt-6 border-t border-gray-50 text-center">
+                                <a class="text-sm font-bold text-gray-500 hover:text-cimmyt-green transition-colors"
+                                    href="/register">
+                                    Need a new account? Register here
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden h-fit">
+                        <div class="bg-cimmyt-blue p-6 flex items-center gap-3 text-white">
+                            <i class="fa fa-lock"></i>
+                            <span class="font-bold uppercase tracking-widest text-sm">Portal Credentials</span>
+                        </div>
+                        <div class="p-8 md:p-10">
+                            <form novalidate name="loginForm" class="space-y-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">E-mail Address</label>
+                                    <div
+                                        class="relative group border border-gray-200 rounded-xl bg-gray-50 focus-within:border-cimmyt-green focus-within:ring-1 focus-within:ring-cimmyt-green transition-all">
+                                        <i data-lucide="mail"
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-cimmyt-green transition-colors z-10"></i>
+                                        <input type="email" required
+                                            class="w-full pl-12 pr-4 py-3 bg-transparent outline-none text-sm placeholder:text-gray-300"
+                                            placeholder="example@cgiar.org">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">Password</label>
+                                    <div
+                                        class="relative group border border-gray-200 rounded-xl bg-gray-50 focus-within:border-cimmyt-green focus-within:ring-1 focus-within:ring-cimmyt-green transition-all">
+                                        <i data-lucide="lock"
+                                            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 group-focus-within:text-cimmyt-green transition-colors z-10"></i>
+                                        <input type="password" required
+                                            class="w-full pl-12 pr-12 py-3 bg-transparent outline-none text-sm placeholder:text-gray-300"
+                                            placeholder="••••••••">
+                                        <button type="button"
+                                            class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-cimmyt-green z-10">
+                                            <i class="fa fa-eye-slash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3 px-1">
+                                    <input type="checkbox" id="login-rememberme">
+                                    <label for="login-rememberme" class="text-xs text-gray-500 leading-tight">
+                                        Keep me signed in <span class="block opacity-60">(Do not use on public
+                                            devices)</span>
+                                    </label>
+                                </div>
+
+                                <div class="pt-6 border-t border-gray-50 flex flex-col items-center gap-6 mt-8">
+                                    <div
+                                        class="flex justify-center p-4 bg-gray-50 rounded-2xl border border-dashed border-gray-200 w-full hover:bg-gray-100 transition-colors">
+                                        <div class="scale-90 md:scale-100"> [re-captcha component] </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-2 gap-4 w-full">
+                                        <button type="submit"
+                                            class="btn-portal-primary text-[12px] uppercase tracking-widest h-[52px]">
+                                            Login
+                                        </button>
+                                        <button type="button"
+                                            class="py-3 border border-gray-200 text-gray-600 font-bold rounded-xl hover:bg-gray-50 transition-all text-[12px] uppercase tracking-widest h-[52px] shadow-sm">
+                                            Forgot Password
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="mt-8 pt-6 border-t border-gray-100 text-[11px] text-gray-400 space-y-2">
+                                <p>Difficulties logging in? <a href="mailto:superadmin@scriptoria.co.uk"
+                                        class="text-cimmyt-green font-bold hover:underline">Contact Support</a></p>
+                                <p>We care about your privacy. Read our <a href="/privacypolicy"
+                                        class="text-cimmyt-green underline hover:text-green-800">Privacy
+                                        Policy</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </app-sign-in>
+        </section>
+    </main>
+    <footer class="bg-cimmyt-blue text-white p-10">
+        <nav aria-label="Enlaces corporativos">
+            <ul class="flex gap-4 place-content-center">
+                <li><a href="#">Privacidad</a></li>
+                <li>|</li>
+                <li>Copyright © 2026 CIMMYT Inc. All rights reserved.</li>
+                <li>|</li>
+                <li>Version 2.0.0</li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

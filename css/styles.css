@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    /* Primary Colors */
+    --color-cimmyt-green: #76bc21;
+    --color-cimmyt-green-80: #93cb6c;
+    --color-cimmyt-green-60: #b7d799;
+    --color-cimmyt-green-40: #9fca77;
+    --color-cimmyt-green-20: #e4f1db;
+
+    --color-cimmyt-marine: #346671;
+    --color-cimmyt-marine-80: #66848c;
+    --color-cimmyt-marine-60: #8ca2a8;
+    --color-cimmyt-marine-40: #b2c2c6;
+    --color-cimmyt-marine-20: #d8e0e2;
+
+    --color-cimmyt-blue: #8ec1cb;
+    --color-cimmyt-blue-80: #adcdd5;
+    --color-cimmyt-blue-60: #c2dadf;
+    --color-cimmyt-blue-40: #d6e6ea;
+    --color-cimmyt-blue-20: #ebf3f4;
+
+    --color-cimmyt-brown: #704b0f;
+    --color-cimmyt-brown-80: #8e714e;
+    --color-cimmyt-brown-60: #a9947a;
+    --color-cimmyt-brown-40: #c7b7a6;
+    --color-cimmyt-brown-20: #e2dbd3;
+
+    --color-cimmyt-orange: #ffbf50;
+    --color-cimmyt-orange-80: #ffcd77;
+    --color-cimmyt-orange-60: #ffd99a;
+    --color-cimmyt-orange-40: #ffe5bd;
+    --color-cimmyt-orange-20: #fff3df;
+
+    /* Secondary Colors */
+    --color-cimmyt-gray: #54565b;
+    --color-cimmyt-gray-80: #77797b;
+    --color-cimmyt-gray-60: #98999C;
+    --color-cimmyt-gray-40: #BBBCBE;
+    --color-cimmyt-gray-20: #DCDDDE;
+
+    --color-cimmyt-green-light: #DDDAA4;
+    --color-cimmyt-green-light-80: #E3E3B6;
+    --color-cimmyt-green-light-60: #EAEAC8;
+    --color-cimmyt-green-light-40: #F3F1DB;
+    --color-cimmyt-green-light-20: #F8F8ED;
+
+    --color-cimmyt-orange-light: #F29657;
+    --color-cimmyt-orange-light-80: #F7AC79;
+    --color-cimmyt-orange-light-60: #FAC19C;
+    --color-cimmyt-orange-light-40: #FBD5BD;
+    --color-cimmyt-orange-light-20: #FEEBDE;
+
+    --color-cimmyt-grayish-green: #ACB7AC;
+    --color-cimmyt-grayish-green-80: #BCC5BC;
+    --color-cimmyt-grayish-green-60: #CED4CC;
+    --color-cimmyt-grayish-green-40: #DCE2DE;
+    --color-cimmyt-grayish-green-20: #EFF1EF;
+
+    --color-cimmyt-dusty-orange: #D97941;
+    --color-cimmyt-dusty-orange-80: #E09262;
+    --color-cimmyt-dusty-orange-60: #E8AC84;
+    --color-cimmyt-dusty-orange-40: #F0C8A6;
+    --color-cimmyt-dusty-orange-20: #F8E4C8;
+
+    /* Sombras personalizadas */
+    --shadow-cimmyt: 0 10px 30px -10px rgba(56, 87, 35, 0.2);
+}
+
+
+@layer base {
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+        color: var(--color-cimmyt-gray);
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    }
+}
+
+@layer components {
+
+    /* Basic Typography & Links */
+    .link {
+        @apply text-cimmyt-marine active:text-cimmyt-blue visited:text-cimmyt-blue-60 hover:text-cimmyt-orange transition-colors duration-200 underline;
+    }
+
+    .title {
+        @apply font-bold text-2xl py-6;
+    }
+
+    .subtitle {
+        @apply font-bold text-lg py-6;
+    }
+
+    /* Badges */
+    .pending {
+        @apply px-2 py-1 text-[10px] font-bold uppercase rounded-full bg-cimmyt-marine text-white;
+    }
+
+    .completed {
+        @apply px-2 py-1 text-[10px] font-bold uppercase rounded-full bg-cimmyt-green text-white;
+    }
+
+    .in-progress {
+        @apply px-2 py-1 text-[10px] font-bold uppercase rounded-full bg-cimmyt-orange text-white;
+    }
+
+    .cancelled {
+        @apply px-2 py-1 text-[10px] font-bold uppercase rounded-full bg-red-500 text-white;
+    }
+
+    .on-hold {
+        @apply px-2 py-1 text-[10px] font-bold uppercase rounded-full bg-cimmyt-gray-60 text-white;
+    }
+
+    /* Tables */
+    .table-stylish {
+        @apply w-full text-left border-collapse bg-white;
+    }
+
+    .table-stylish thead {
+        @apply bg-gray-50 border-b border-gray-200;
+    }
+
+    .table-stylish thead th {
+        @apply p-4 text-xs font-bold text-gray-600 uppercase tracking-wider;
+    }
+
+    .table-stylish thead th.text-right {
+        @apply text-right;
+    }
+
+    .table-stylish thead th.text-center {
+        @apply text-center;
+    }
+
+    .table-stylish tbody {
+        @apply divide-y divide-gray-100;
+    }
+
+    .table-stylish tbody tr {
+        @apply hover:bg-gray-50 transition-colors duration-200;
+    }
+
+    .table-stylish tbody td {
+        @apply p-4 text-sm text-gray-700;
+    }
+
+    .table-stylish tbody td.font-mono {
+        @apply font-mono text-xs text-gray-500;
+    }
+
+    .table-stylish .filter-row {
+        @apply bg-white border-b border-gray-100;
+    }
+
+    .table-stylish .filter-row td {
+        @apply px-4 py-2;
+    }
+
+    .table-stylish .filter-row td input,
+    .table-stylish .filter-row td select {
+        @apply w-full text-xs border border-gray-100 rounded p-1 outline-none focus:border-cimmyt-green transition-all;
+    }
+
+    /* Forms */
+    input[type="text"],
+    input[type="number"],
+    select {
+        @apply transition-all duration-200;
+    }
+
+    /* FIX: Corrected element selector for checkbox */
+    .checkbox,
+    input[type="checkbox"] {
+        @apply relative appearance-none w-5 h-5 border border-gray-300 rounded bg-white checked:bg-cimmyt-green checked:border-cimmyt-green transition-all cursor-pointer;
+    }
+
+    /* Search & Filter Containers */
+    .search-filter-container {
+        @apply w-full flex flex-col xl:flex-row xl:items-center justify-between gap-6 p-4 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300;
+    }
+
+    .search-input-wrapper {
+        @apply relative w-full xl:w-96 flex-shrink-0;
+    }
+
+    .filter-group {
+        @apply w-full xl:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 flex-grow justify-end;
+    }
+
+    .filter-label {
+        @apply text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap;
+    }
+
+    .filter-select {
+        @apply w-full sm:w-48 pl-4 pr-10 py-2.5 text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-xl appearance-none outline-none focus:bg-white focus:border-cimmyt-green focus:ring-2 focus:ring-cimmyt-green/20 transition-all cursor-pointer;
+    }
+
+    /* Cards */
+    .card-service {
+        @apply bg-white relative rounded-2xl border border-gray-100 p-6 transition-all duration-300 ease-out shadow-sm hover:shadow-2xl hover:-translate-y-1.5 overflow-hidden flex flex-col;
+    }
+
+    .card-service::before {
+        content: '';
+        @apply absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-cimmyt-green to-cimmyt-blue scale-x-0 origin-left transition-transform duration-500 z-10;
+        transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .card-service:hover::before {
+        @apply scale-x-100;
+    }
+
+    .card-service:hover .card-title h3 {
+        @apply text-cimmyt-green transition-colors duration-300;
+    }
+
+    .card-service-brochure {
+        @apply space-y-6 text-gray-700 leading-relaxed;
+    }
+
+    /* Header Buttons */
+    .btn-menu-header {
+        @apply text-cimmyt-gray-80 hover:text-cimmyt-green transition-colors;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply py-2 px-4 text-[14px] font-bold rounded-full;
+    }
+
+    .btn-lg {
+        @apply px-8 py-3 text-lg font-semibold;
+    }
+
+    .btn-outline-primary {
+        @apply text-cimmyt-green border border-cimmyt-green hover:bg-cimmyt-green hover:text-white transition-all duration-200;
+    }
+
+    .btn-danger {
+        @apply bg-red-700 text-white hover:bg-red-600 active:bg-red-600 focus:bg-red-600 transition-all duration-200;
+    }
+
+    .btn-primary {
+        @apply bg-cimmyt-green text-white hover:bg-cimmyt-green-60 active:bg-cimmyt-green-60 focus:bg-cimmyt-green-60 transition-all duration-200;
+    }
+
+    .btn-info {
+        @apply bg-cimmyt-blue text-white hover:bg-cimmyt-blue-60 active:bg-cimmyt-blue-60 focus:bg-cimmyt-blue-60 transition-all duration-200;
+    }
+
+    .btn-warning {
+        @apply bg-cimmyt-orange text-white hover:bg-cimmyt-orange-60 active:bg-cimmyt-orange-60 focus:bg-cimmyt-orange-60 transition-all duration-200;
+    }
+
+    /* Estilo base para los inputs del portal y sub-elementos */
+    .form-input-portal,
+    .custom-ng-select .ng-select-container {
+        @apply !w-full !px-4 !py-3 !bg-gray-50 !border !border-gray-200 !rounded-xl !outline-none !transition-all !text-sm;
+    }
+
+    .form-input-portal::placeholder,
+    .custom-ng-select .ng-select-container::placeholder {
+        color: #d1d5db !important;
+        /* gray-300 */
+    }
+
+    .form-input-portal:focus-within,
+    .custom-ng-select .ng-select-container:focus-within {
+        border-color: var(--color-cimmyt-green) !important;
+        box-shadow: 0 0 0 1px var(--color-cimmyt-green) !important;
+    }
+
+    input[readonly] {
+        @apply bg-gray-100 cursor-not-allowed opacity-75 border-dashed;
+    }
+
+    .custom-ng-select .ng-dropdown-panel {
+        @apply rounded-xl border border-gray-100 shadow-xl overflow-hidden mt-2;
+    }
+
+    .custom-ng-select .ng-option-marked {
+        @apply !bg-green-50 !text-cimmyt-green !font-bold;
+    }
+
+    .dotted-rounded-div {
+        @apply text-[11px] font-medium text-amber-700 bg-amber-50/50 border border-dashed border-amber-200 rounded-lg px-3 py-2;
+    }
+
+    .g-recaptcha-wrapper {
+        @apply transform scale-90 md:scale-100 origin-center;
+    }
+
+    /* Botón primario del portal */
+    .btn-portal-primary {
+        @apply px-8 py-3 bg-cimmyt-green text-white font-bold rounded-xl shadow-lg shadow-green-900/20 hover:bg-green-800 active:scale-95 transition-all;
+    }
+}
+
+/* ----------------------------------
+   CUSTOM STANDARD CSS
+-------------------------------------*/
+
+:root {
+    color: var(--color-cimmyt-gray);
+}
+
+/* Sidebar Menu Basic UI */
+.sidebar-collapsed {
+    width: 5rem !important;
+}
+
+.sidebar-collapsed .sidebar-text {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-collapsed .submenu {
+    display: none !important;
+}
+
+.submenu-active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.submenu-active .submenu {
+    display: flex;
+}
+
+/* Sidebar Accordion Details */
+#menu-sidebar .submenu-container {
+    width: 100%;
+}
+
+#menu-sidebar .submenu-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#menu-sidebar .submenu-active>.submenu-content {
+    max-height: 500px;
+    opacity: 1;
+}
+
+#menu-sidebar .submenu-active>button .chevron-icon {
+    transform: rotate(180deg);
+}
+
+#menu-sidebar a:hover,
+#menu-sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+#menu-sidebar a,
+#menu-sidebar button {
+    transition: all 0.2s ease;
+}
+
+.pl-4.border-l {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu-sidebar .sidebar-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.sidebar-collapsed #menu-sidebar .sidebar-text,
+.sidebar-collapsed #menu-sidebar .chevron-icon,
+.sidebar-collapsed #menu-sidebar .submenu-content {
+    display: none;
+}
+
+/* styles.css */
+
+/* Estilo para los contenedores de iconos en contacto */
+.contact-icon-box {
+    @apply w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-cimmyt-green shrink-0 transition-colors duration-300;
+}
+
+/* Hover effect para las filas de contacto */
+.contact-row-item:hover .contact-icon-box {
+    @apply bg-cimmyt-green text-white;
+}
+
+/* Ajuste específico para el textarea del formulario */
+textarea.form-input-portal {
+    min-height: 120px;
+}
+
+/* Animación sutil para la sombra del card al hacer hover */
+.shadow-xl {
+    transition: box-shadow 0.3s ease;
+}
+
+.shadow-xl:hover {
+    box-shadow: 0 25px 50px -12px rgba(56, 87, 35, 0.15);
+}
+
+/* Fix para el reCAPTCHA en móviles */
+iframe[title="reCAPTCHA"] {
+    max-width: 100% !important;
+}

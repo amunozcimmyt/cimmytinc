@@ -1,0 +1,28 @@
+{
+  "name": "cimmytinc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "dev": "vite",
+    "clean": "rimraf css/output.css",
+    "prebuild:css": "npm run clean",
+    "build:css": "tailwindcss -i css/styles.css -o css/output.css --watch",
+    "prod": "tailwindcss -i css/styles.css -o css/output.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "rimraf": "^6.1.3",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.0.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "@tailwindcss/postcss": "^4.2.2"
+  }
+}

@@ -1,0 +1,56 @@
+/* Sidebar Menu Styles */
+#menu-sidebar .submenu-container {
+    width: 100%;
+}
+
+#menu-sidebar .submenu-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+#menu-sidebar .submenu-active > .submenu-content {
+    max-height: 500px; /* Large enough to fit content */
+    opacity: 1;
+}
+
+#menu-sidebar .submenu-active > button .chevron-icon {
+    transform: rotate(180deg);
+}
+
+/* Premium micro-interactions */
+#menu-sidebar a:hover, 
+#menu-sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+#menu-sidebar a, 
+#menu-sidebar button {
+    transition: all 0.2s ease;
+}
+
+/* 3rd level specific styles */
+.pl-4.border-l {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Lucide icon alignment */
+#menu-sidebar .sidebar-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Sidebar collapsed state handling (if applicable) */
+.sidebar-collapsed #menu-sidebar .sidebar-text {
+    display: none;
+}
+
+.sidebar-collapsed #menu-sidebar .chevron-icon {
+    display: none;
+}
+
+.sidebar-collapsed #menu-sidebar .submenu-content {
+    display: none;
+}

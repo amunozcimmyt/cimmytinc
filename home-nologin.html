@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>CIMMYT Inc Service Portal</title>
+</head>
+
+<body>
+    <header class="grid grid-cols-3 bg-white p-4">
+        <div class="logo">
+            <img class="h-16" src="img/CIMMYTIncincolor.png" alt="">
+        </div>
+        <nav>
+            <ul class="flex items-center h-16 space-x-8">
+
+                <li>
+                    <a href="home-nologin.html" class="btn-menu-header">Home</a>
+                </li>
+                <li>
+                    <a href="services-brochure-nologin.html" class="btn-menu-header">Service Brochure</a>
+                </li>
+                <li>
+                    <a href="service-categories-nologin.html" class="btn-menu-header">Service Categories</a>
+                </li>
+                <li>
+                    <a href="contact-us-nologin.html" class="btn-menu-header">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="">
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <a href="login.html" class="btn bg-cimmyt-marine text-white btn-lg">
+                    Log In
+                </a>
+                <a href="register.html" class="btn bg-cimmyt-green text-white btn-lg">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col w-full">
+        <section class="flex flex-col w-full">
+            <div class="w-full">
+                <div class="grid grid-cols-1 gap-8">
+                    <div id="HeroCarousel" class="relative w-full h-[500px] overflow-hidden group">
+                        <div class="relative w-full h-full">
+                            <!-- SLIDE 1 -->
+                            <div
+                                class="carousel-item absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100">
+                                <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/LandingPageImages/Slider1.jpg"
+                                    alt="Agricultural Field 1" class="w-full h-full object-cover">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent">
+                                </div>
+
+                                <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20">
+                                    <div class="max-w-2xl space-y-4">
+                                        <div class="space-y-1">
+                                            <p
+                                                class="text-white text-xl md:text-2xl font-light tracking-wide uppercase opacity-90">
+                                                Welcome to the
+                                            </p>
+                                            <h2
+                                                class="text-white text-4xl md:text-6xl font-black leading-tight drop-shadow-lg">
+                                                CIMMYT Inc <br>
+                                                <span class="text-cimmyt-gold">Service Portal</span>
+                                            </h2>
+                                        </div>
+
+                                        <p
+                                            class="text-gray-200 text-lg md:text-xl max-w-lg leading-relaxed border-l-4 border-cimmyt-green pl-4">
+                                            Explore how our services can deliver to your agricultural needs.
+                                        </p>
+
+                                        <div class="pt-4">
+                                            <button class="btn btn-primary btn-lg shadow-lg hover:shadow-green-900/20">
+                                                Get Started
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 2 -->
+                            <div
+                                class="carousel-item absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                                <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/LandingPageImages/Slider2.jpg"
+                                    alt="Agricultural Field 2" class="w-full h-full object-cover">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent">
+                                </div>
+
+                                <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20">
+                                    <div class="max-w-2xl space-y-4">
+                                        <div class="space-y-1">
+                                            <p
+                                                class="text-white text-xl md:text-2xl font-light tracking-wide uppercase opacity-90">
+                                                Discover
+                                            </p>
+                                            <h2
+                                                class="text-white text-4xl md:text-6xl font-black leading-tight drop-shadow-lg">
+                                                Innovation in <br>
+                                                <span class="text-cimmyt-gold">Agriculture</span>
+                                            </h2>
+                                        </div>
+
+                                        <p
+                                            class="text-gray-200 text-lg md:text-xl max-w-lg leading-relaxed border-l-4 border-cimmyt-green pl-4">
+                                            Explore how our services can deliver to your agricultural needs.
+                                        </p>
+
+                                        <div class="pt-4">
+                                            <button class="btn btn-primary btn-lg shadow-lg hover:shadow-green-900/20">
+                                                Get Started
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SLIDE 3 -->
+                            <div
+                                class="carousel-item absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0">
+                                <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/LandingPageImages/Slider3.jpg"
+                                    alt="Agricultural Field 3" class="w-full h-full object-cover">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent">
+                                </div>
+
+                                <div class="absolute inset-0 flex flex-col justify-center px-10 md:px-20">
+                                    <div class="max-w-2xl space-y-4">
+                                        <div class="space-y-1">
+                                            <p
+                                                class="text-white text-xl md:text-2xl font-light tracking-wide uppercase opacity-90">
+                                                Empowering with
+                                            </p>
+                                            <h2
+                                                class="text-white text-4xl md:text-6xl font-black leading-tight drop-shadow-lg">
+                                                SAGA <br>
+                                                <span class="text-cimmyt-gold">Technologies</span>
+                                            </h2>
+                                        </div>
+
+                                        <p
+                                            class="text-gray-200 text-lg md:text-xl max-w-lg leading-relaxed border-l-4 border-cimmyt-green pl-4">
+                                            Explore how our services can deliver to your agricultural needs.
+                                        </p>
+
+                                        <div class="pt-4">
+                                            <button class="btn btn-primary btn-lg shadow-lg hover:shadow-green-900/20">
+                                                Get Started
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <button id="prevBtn"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transition-all hover:bg-white/20">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+
+                        <button id="nextBtn"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 opacity-0 group-hover:opacity-100 transition-all hover:bg-white/20">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+
+                        <!-- Indicators -->
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                            <div
+                                class="carousel-indicator w-8 h-1 bg-white rounded-full hover:bg-white/60 cursor-pointer transition-colors">
+                            </div>
+                            <div
+                                class="carousel-indicator w-8 h-1 bg-white/40 rounded-full hover:bg-white/60 cursor-pointer transition-colors">
+                            </div>
+                            <div
+                                class="carousel-indicator w-8 h-1 bg-white/40 rounded-full hover:bg-white/60 cursor-pointer transition-colors">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="flex flex-col w-full">
+            <div id="search-filter-bar" class="w-full mb-8">
+                <div class="search-filter-container">
+
+                    <!-- Search Left -->
+                    <div class="search-input-wrapper">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                            <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
+                        </div>
+                        <input type="text"
+                            class="w-full pl-11 pr-10 py-2.5 text-sm bg-gray-50 border border-gray-200 rounded-xl outline-none focus:bg-white focus:border-cimmyt-green focus:ring-2 focus:ring-cimmyt-green/20 transition-all"
+                            placeholder="Search projects, services...">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                            <button class="text-gray-400 hover:text-cimmyt-orange transition-colors">
+                                <i data-lucide="x" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filters Right -->
+                    <div class="filter-group">
+                        <span class="filter-label">Filter by:</span>
+
+                        <div class="relative group">
+                            <select class="filter-select">
+                                <option value="" disabled selected>Category</option>
+                                <option value="1">Molecular Analyses</option>
+                                <option value="2">Genotyping</option>
+                                <option value="3">Sequencing</option>
+                            </select>
+                            <div
+                                class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400 group-focus-within:text-cimmyt-green transition-colors">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <select class="filter-select">
+                                <option value="" disabled selected>Provider</option>
+                                <option value="1">CIMMYT Lab A</option>
+                                <option value="2">CGIAR Alliance</option>
+                                <option value="3">External Partner</option>
+                            </select>
+                            <div
+                                class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-400 group-focus-within:text-cimmyt-green transition-colors">
+                                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                            </div>
+                        </div>
+
+                        <button
+                            class="flex items-center gap-2 px-3 py-2 text-sm font-bold text-gray-400 hover:text-cimmyt-orange transition-colors rounded-lg hover:bg-orange-50">
+                            <i data-lucide="filter-x" class="w-4 h-4"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-service">
+                    <div class="card-title">
+                        <h3 class="font-extrabold text-foreground text-cimmyt-marine">DArTseq: High-throughput
+                            genotyping
+                            (SAGA) 123</h3>
+                    </div>
+                    <div class="card-body mt-6 border-t border-border border-cimmyt-gray-20 pt-4 space-y-2">
+                        <p class="font-semibold">Service Category</p>
+                        <p class="text-cimmyt-gray">Molecular Analyses</p>
+                        <p class="font-semibold">Description:</p>
+                        <p class="text-cimmyt-gray">DArTseq combines genome complexity reduction with next-generation
+                            sequencing to deliver
+                            high-density, cost-effective genotyping, even without a reference genome. Generate thousands
+                            of reliable markers for genetic mapping, diversity analysis, and trait discovery across any
+                            species, from research to breeding applications.</p>
+                        <p class="mt-6"><a href="services-brochure.html" class="btn btn-outline-primary">Go
+                                to
+                                brochure</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-service">
+                    <div class="card-title">
+                        <h3 class="font-extrabold text-foreground text-cimmyt-marine">DArTseq: High-throughput
+                            genotyping
+                            (SAGA) 123</h3>
+                    </div>
+                    <div class="card-body mt-6 border-t border-border border-cimmyt-gray-20 pt-4 space-y-2">
+                        <p class="font-semibold">Service Category</p>
+                        <p class="text-cimmyt-gray">Molecular Analyses</p>
+                        <p class="font-semibold">Description:</p>
+                        <p class="text-cimmyt-gray">DArTseq combines genome complexity reduction with next-generation
+                            sequencing to deliver
+                            high-density, cost-effective genotyping, even without a reference genome. Generate thousands
+                            of reliable markers for genetic mapping, diversity analysis, and trait discovery across any
+                            species, from research to breeding applications.</p>
+                        <p class="mt-6"><a href="services-brochure.html" class="btn btn-outline-primary">Go
+                                to
+                                brochure</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-service">
+                    <div class="card-title">
+                        <h3 class="font-extrabold text-foreground text-cimmyt-marine">DArTseq: High-throughput
+                            genotyping
+                            (SAGA) 123</h3>
+                    </div>
+                    <div class="card-body mt-6 border-t border-border border-cimmyt-gray-20 pt-4 space-y-2">
+                        <p class="font-semibold">Service Category</p>
+                        <p class="text-cimmyt-gray">Molecular Analyses</p>
+                        <p class="font-semibold">Description:</p>
+                        <p class="text-cimmyt-gray">DArTseq combines genome complexity reduction with next-generation
+                            sequencing to deliver
+                            high-density, cost-effective genotyping, even without a reference genome. Generate thousands
+                            of reliable markers for genetic mapping, diversity analysis, and trait discovery across any
+                            species, from research to breeding applications.</p>
+                        <p class="mt-6"><a href="services-brochure.html" class="btn btn-outline-primary">Go
+                                to
+                                brochure</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-10 mb-10">
+                <a href="services-brochure-nologin.html" class="btn btn-primary btn-lg shadow-sm">Go to Brochures</a>
+            </div>
+        </section>
+        <section class="flex flex-col w-full">
+            <div class="w-full">
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="max-w-7xl mx-auto p-6 md:p-10 bg-white">
+                        <h1 class="text-2xl md:text-2xl font-extrabold text-cimmyt-green mb-10 tracking-tight">
+                            About CIMMYT Inc.
+                        </h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="card-service-brochure">
+                                <p><span style="font-size: 24pt;">As part of CIMMYT, CIMMYT Inc leverages the Centre’s
+                                        world-class expertise, research infrastructure, and reputation by providing a
+                                        platform for easy access to high-quality research services. These services help
+                                        scale solutions to global challenges and enhance CIMMYT’s overall impact.</span>
+                                </p>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div class="w-full h-full flex items-center justify-center overflow-hidden">
+                                    <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/LandingPageImages/AboutCIMMYTInc2.jpg"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer class="bg-cimmyt-blue text-white p-10">
+        <nav aria-label="Enlaces corporativos">
+            <ul class="flex gap-4 place-content-center">
+                <li><a href="#">Privacidad</a></li>
+                <li>|</li>
+                <li>Copyright © 2026 CIMMYT Inc. All rights reserved.</li>
+                <li>|</li>
+                <li>Version 2.0.0</li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

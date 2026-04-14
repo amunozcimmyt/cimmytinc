@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>CIMMYT Inc Service Portal</title>
+</head>
+
+<body>
+    <header class="grid grid-cols-3 bg-white p-4">
+        <div class="logo">
+            <img class="h-16" src="img/CIMMYTIncincolor.png" alt="">
+        </div>
+        <nav>
+            <ul class="flex items-center h-16 space-x-8">
+
+                <li>
+                    <a href="index.html" class="btn-menu-header">Hub
+                        Home</a>
+                </li>
+                <li>
+                    <a href="brochure.html" class="btn-menu-header">Brochure</a>
+                </li>
+                <li class="relative group h-full items-center">
+                    <button class="flex items-center gap-1 btn-menu-header h-full">
+                        Lab Services
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 w-56 bg-white shadow-xl rounded-b-lg py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                        <a href="#" class="block px-4 py-2 text-sm text-cimmyt-gray hover:bg-cimmyt-gray-20">Molecular
+                            Analyses</a>
+                    </div>
+                </li>
+                <li class="relative group h-full items-center">
+                    <button class="flex items-center gap-1 btn-menu-header h-full">
+                        Resources
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="absolute top-full left-0 w-56 bg-white shadow-xl rounded-b-lg py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                        <a href="#" class="block px-4 py-2 text-sm text-cimmyt-gray hover:bg-cimmyt-gray-20">CGIAR
+                            Service Portal</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="">
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <div class="relative group">
+                    <button class="flex items-center gap-3 p-1 rounded-full hover:bg-gray-50 transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-full bg-cimmyt-orange flex items-center justify-center text-white font-bold text-sm">
+                            FB
+                        </div>
+                        <div class="hidden sm:block text-left">
+                            <div class="text-sm font-bold text-gray-800 leading-none">Foo Bar </div>
+                            <div class="text-xs text-cimmyt-gray">f.bar@cgiar.org</div>
+                        </div>
+                        <svg class="w-4 h-4 text-gray-400 transition-transform group-hover:rotate-180" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div
+                        class="absolute right-0 mt-2 w-72 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all z-50 overflow-hidden">
+
+                        <div class="p-4 border-b border-gray-50">
+                            <div class="flex items-center gap-2 text-sm font-bold text-gray-700">
+                                <i class="fa-solid fa-compass text-cimmyt-green"></i> Select Landing Page
+                            </div>
+                            <p class="text-[11px] text-gray-500 mb-2">Choose the page you arrive at following log in
+                            </p>
+                            <select
+                                class="w-full text-sm border border-gray-200 rounded-md p-2 outline-none focus:border-cimmyt-green">
+                                <option>Hub</option>
+                                <option>Dashboard</option>
+                            </select>
+                        </div>
+
+                        <a href="#" class="block p-4 hover:bg-gray-50 transition-colors">
+                            <div class="flex items-center gap-2 text-sm font-bold text-gray-700">
+                                <i class="fa-solid fa-gear text-cimmyt-green"></i> Account Settings
+                            </div>
+                            <p class="text-[11px] text-gray-500">Update personal details and password</p>
+                        </a>
+
+                        <a href="#" class="block p-4 hover:bg-red-50 transition-colors border-t border-gray-50">
+                            <div class="flex items-center gap-2 text-sm font-bold text-red-600">
+                                <i class="fa-solid fa-power-off"></i> Log Out
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main class="flex">
+        <aside id="sidebar"
+            class="py-4 relative bg-cimmyt-green text-white transition-all duration-300 ease-in-out w-64 min-h-full">
+
+            <button onclick="toggleSidebar()"
+                class="absolute -right-6 top-10 bg-cimmyt-orange text-white rounded-full p-1 shadow-lg hover:scale-110 transition-transform p-3 z-40">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+            <nav id="menu-sidebar" class="flex-1 px-4 space-y-1">
+                <a href="#" class="flex items-center gap-4 p-3 rounded-lg hover:bg-white/10 transition-colors group">
+                    <i data-lucide="house" class="w-5 h-5"></i>
+                    <span class="sidebar-text">Hub</span>
+                </a>
+
+                <!-- Manage Organizations (With Submenu) -->
+                <div class="submenu-container text-left">
+                    <button onclick="toggleSubmenu(this)"
+                        class="w-full flex justify-between p-3 rounded-lg hover:bg-white/10 transition-colors group">
+                        <div class="flex gap-4">
+                            <i data-lucide="building-2" class="w-5 h-5"></i>
+                            <span class="sidebar-text text-left">Admin</span>
+                        </div>
+                        <i data-lucide="chevron-down"
+                            class="w-4 h-4 transition-transform duration-200 chevron-icon"></i>
+                    </button>
+                    <div class="submenu-content overflow-hidden">
+                        <div class="pl-9 space-y-1 mt-1">
+                            <!-- Staff (With Sub-Submenu example) -->
+                            <div class="submenu-container">
+                                <button onclick="toggleSubmenu(this)"
+                                    class="w-full flex items-center text-left p-2 rounded-lg hover:bg-white/10 transition-colors text-sm">
+                                    <span>Manage Organizations</span>
+                                    <i data-lucide="chevron-down"
+                                        class="w-3 h-3 transition-transform duration-200 chevron-icon"></i>
+                                </button>
+                                <div class="submenu-content overflow-hidden">
+                                    <div class="pl-4 space-y-1 mt-1 border-l border-white/10 ml-1">
+                                        <a href="#"
+                                            class="block p-2 rounded-lg hover:bg-white/10 transition-colors text-xs text-white/70">Staff</a>
+                                        <a href="#"
+                                            class="block p-2 rounded-lg hover:bg-white/10 transition-colors text-xs text-white/70">Organizations</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#"
+                                class="block p-2 rounded-lg hover:bg-white/10 transition-colors text-sm">Accounts
+                                Approval</a>
+                            <a href="#" class="block p-2 rounded-lg hover:bg-white/10 transition-colors text-sm">Pages
+                                CMS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Support (With Submenu) -->
+                <div class="submenu-container">
+                    <button onclick="toggleSubmenu(this)"
+                        class="w-full flex items-center justify-between p-3 rounded-lg hover:bg-white/10 transition-colors group">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="life-buoy" class="w-5 h-5"></i>
+                            <span class="sidebar-text">Support</span>
+                        </div>
+                        <i data-lucide="chevron-down"
+                            class="w-4 h-4 transition-transform duration-200 chevron-icon"></i>
+                    </button>
+                    <div class="submenu-content overflow-hidden">
+                        <div class="pl-9 space-y-1 mt-1">
+                            <a href="#"
+                                class="block p-2 rounded-lg hover:bg-white/10 transition-colors text-sm">Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        <section class="flex flex-col px-10 py-8 w-full">
+            <div class="w-full" id="breadcrumbs">
+                <nav aria-label="Ruta de navegación" class="py-3">
+                    <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                        <li>
+                            <a href="#" class="flex items-center gap-1 hover:text-cimmyt-green transition-colors">
+                                <i data-lucide="home" class="w-4 h-4"></i>
+                                <span>Hub Home</span>
+                            </a>
+                        </li>
+
+                        <li class="text-gray-400">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:text-cimmyt-green transition-colors">Brochure</a>
+                        </li>
+
+                        <li class="text-gray-400">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-cimmyt-green transition-colors">Services Brochure</a>
+                        </li>
+
+                        <li class="text-gray-400">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="w-full">
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="max-w-7xl mx-auto p-6 md:p-10 bg-white">
+                        <h1 class="text-2xl md:text-2xl font-extrabold text-cimmyt-green mb-10 tracking-tight">
+                            CTAB DNA extraction for seed or grain (SAGA)
+                        </h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="card-service-brochure">
+                                <p>
+                                    At SAGAs Lab, DNA isolation is performed using multiple tailored strategies to
+                                    accommodate both fresh and preserved tissue types. This service begins with the
+                                    receipt
+                                    of seed or grain samples, which are germinated in a controlled greenhouse to produce
+                                    uniform seedlings. Young leaf tissue is harvested at the optimal growth stage and
+                                    processed using a CTAB (Cetyltrimethylammonium Bromide) protocol, which effectively
+                                    removes polysaccharides and secondary metabolites to yield high-quality DNA. The
+                                    extraction workflow is designed to produce DNA suitable for downstream applications
+                                    such
+                                    as sequencing, marker-assisted selection, and quality assurance.
+                                </p>
+
+                                <p>
+                                    As part of the service, SAGAs Lab develops a detailed output report for each sample,
+                                    including the Sample ID and DNA quality metrics. This ensures traceability,
+                                    reproducibility, and confidence in the genomic material delivered for research and
+                                    breeding applications.
+                                </p>
+
+                                <div class="pt-6 space-y-5">
+                                    <h2 class="text-xl font-bold text-gray-900">Key Strengths and Applications</h2>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Highly effective for plant tissues rich in polysaccharides and
+                                                secondary
+                                                metabolites.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Cost-efficient and adaptable for diverse species.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Suitable for both seed and leaf tissue.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div
+                                    class="w-full h-80 bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 shadow-inner overflow-hidden">
+                                    <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/ServiceImages/SAGA_DarTseq.jpg"
+                                        alt="">
+                                </div>
+
+                                <div
+                                    class="bg-gray-50 border border-gray-100 rounded-2xl p-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Pricing</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            DArTseq has different genotyping options, so pricing depends on sequencing
+                                            depth and the marker-density desired by the user. The options are the
+                                            following:
+                                            · DArTseq High-Density, 2 Millon reads ; 45 USD/sample
+                                            · DArTseq Mid-Density, 1.5 Millon reads ; 35 USD/sample
+                                            · DArTseq Low-Density, 0.8 Millon reads ; 25 USD/sample
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Turnaround time</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Results will be delivered on the platform within 1-2 weeks from the start of
+                                            sample processing.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="#" class="btn btn-warning btn-lg">
+                                        Place order now
+                                    </a>
+                                    <a href="service-categories.html" class="btn btn-info btn-lg">
+                                        Find out more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-7xl mx-auto p-6 md:p-10 bg-white">
+                        <h1 class="text-2xl md:text-2xl font-extrabold text-cimmyt-green mb-10 tracking-tight">
+                            DArTseqLD: Streamlined genotyping for efficient, affordable analysis (SAGA)
+                        </h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="card-service-brochure">
+                                <p>
+                                    At SAGAs Lab, DNA isolation is performed using multiple tailored strategies to
+                                    accommodate both fresh and preserved tissue types. This service begins with the
+                                    receipt
+                                    of seed or grain samples, which are germinated in a controlled greenhouse to produce
+                                    uniform seedlings. Young leaf tissue is harvested at the optimal growth stage and
+                                    processed using a CTAB (Cetyltrimethylammonium Bromide) protocol, which effectively
+                                    removes polysaccharides and secondary metabolites to yield high-quality DNA. The
+                                    extraction workflow is designed to produce DNA suitable for downstream applications
+                                    such
+                                    as sequencing, marker-assisted selection, and quality assurance.
+                                </p>
+
+                                <p>
+                                    As part of the service, SAGAs Lab develops a detailed output report for each sample,
+                                    including the Sample ID and DNA quality metrics. This ensures traceability,
+                                    reproducibility, and confidence in the genomic material delivered for research and
+                                    breeding applications.
+                                </p>
+
+                                <div class="pt-6 space-y-5">
+                                    <h2 class="text-xl font-bold text-gray-900">Key Strengths and Applications</h2>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Highly effective for plant tissues rich in polysaccharides and
+                                                secondary
+                                                metabolites.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Cost-efficient and adaptable for diverse species.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Suitable for both seed and leaf tissue.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div
+                                    class="w-full h-80 bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 shadow-inner overflow-hidden">
+                                    <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/ServiceImages/SAGA_DarTLD.jpg"
+                                        alt="">
+                                </div>
+
+                                <div
+                                    class="bg-gray-50 border border-gray-100 rounded-2xl p-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Pricing</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            DArTag; 14 USD/sample
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Turnaround time</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Results will be delivered on the platform within 1-2 weeks from the start of
+                                            sample processing.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="#" class="btn btn-warning btn-lg">
+                                        Place order now
+                                    </a>
+                                    <a href="service-categories.html" class="btn btn-info btn-lg">
+                                        Find out more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-7xl mx-auto p-6 md:p-10 bg-white">
+                        <h1 class="text-2xl md:text-2xl font-extrabold text-cimmyt-green mb-10 tracking-tight">
+                            DArTag: Cost-effective, low-density genotyping (SAGA)
+                        </h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="card-service-brochure">
+                                <p>
+                                    DArTag is a high-throughput, targeted genotyping solution that delivers flexible,
+                                    accurate, and cost-effective results across a wide range of plant species. Whether
+                                    you are mapping traits or accelerating breeding, DArTag is designed to empower your
+                                    research.</p>
+
+                                <p>
+                                    Unlike DArT’s various traditional genotyping platforms, DArTag is not limited to
+                                    markers identified by the DArTseq system. It enables the targeting of any SNP or
+                                    small indel, provided there is some genomic sequence available around the variant.
+                                    This opens the door to highly customizable panels tailored to specific traits,
+                                    populations, or research goals.
+                                </p>
+
+                                <p>
+                                    The DArTag workflow involves two key steps:
+                                </p>
+                                <p>
+                                <ul class="list-disc">
+                                    <li>
+                                        Target Selection: Specially designed molecular probes capture small genomic
+                                        regions
+                                        containing the desired sequence variants.
+                                    </li>
+                                    <li>
+                                        Amplification and Barcoding: These regions are amplified via PCR while
+                                        simultaneously attaching a unique sample-specific barcode.
+                                    </li>
+                                </ul>
+                                </p> resulting libraries are sequenced using next-generation sequencing (NGS)
+                                platforms. DArT’s proprietary bioinformatics pipeline then processes the data,
+                                delivering high-quality and reproducible genotyping results.
+                                <p>
+                                    The resulting libraries are sequenced using next-generation sequencing (NGS)
+                                    platforms. DArT’s proprietary bioinformatics pipeline then processes the data,
+                                    delivering high-quality and reproducible genotyping results.
+                                </p>
+
+                                <p>
+                                    DArTag’s flexibility, scalability, and species-agnostic design make it an ideal tool
+                                    for modern genomics applications for breeding programs.
+                                </p>
+
+                                <div class="pt-6 space-y-5">
+                                    <h2 class="text-xl font-bold text-gray-900">Key Strengths and Applications</h2>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Highly effective for plant tissues rich in polysaccharides and
+                                                secondary
+                                                metabolites.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Cost-efficient and adaptable for diverse species.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Suitable for both seed and leaf tissue.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div
+                                    class="w-full h-80 bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 shadow-inner overflow-hidden">
+                                    <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/ServiceImages/SAGA_DarTag.jpg"
+                                        alt="">
+                                </div>
+
+                                <div
+                                    class="bg-gray-50 border border-gray-100 rounded-2xl p-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Pricing</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Greenhouse growth of seedlings, leaf tissue harvesting and CTAB based DNA
+                                            extraction; 3.5 USD/sample
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Turnaround time</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Results will be delivered on the platform within 1-2 weeks from the start of
+                                            sample processing.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="#" class="btn btn-warning btn-lg">
+                                        Place order now
+                                    </a>
+                                    <a href="service-categories.html" class="btn btn-info btn-lg">
+                                        Find out more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-7xl mx-auto p-6 md:p-10 bg-white">
+                        <h1 class="text-2xl md:text-2xl font-extrabold text-cimmyt-green mb-10 tracking-tight">
+                            CTAB DNA extraction for seed or grain (SAGA)
+                        </h1>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="card-service-brochure">
+                                <p>
+                                    At SAGAs Lab, DNA isolation is performed using multiple tailored strategies to
+                                    accommodate both fresh and preserved tissue types. This service begins with the
+                                    receipt
+                                    of seed or grain samples, which are germinated in a controlled greenhouse to produce
+                                    uniform seedlings. Young leaf tissue is harvested at the optimal growth stage and
+                                    processed using a CTAB (Cetyltrimethylammonium Bromide) protocol, which effectively
+                                    removes polysaccharides and secondary metabolites to yield high-quality DNA. The
+                                    extraction workflow is designed to produce DNA suitable for downstream applications
+                                    such
+                                    as sequencing, marker-assisted selection, and quality assurance.
+                                </p>
+
+                                <p>
+                                    As part of the service, SAGAs Lab develops a detailed output report for each sample,
+                                    including the Sample ID and DNA quality metrics. This ensures traceability,
+                                    reproducibility, and confidence in the genomic material delivered for research and
+                                    breeding applications.
+                                </p>
+
+                                <div class="pt-6 space-y-5">
+                                    <h2 class="text-xl font-bold text-gray-900">Key Strengths and Applications</h2>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Highly effective for plant tissues rich in polysaccharides and
+                                                secondary
+                                                metabolites.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Cost-efficient and adaptable for diverse species.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="text-cimmyt-green pt-1 font-bold">✓</span>
+                                            <span>Suitable for both seed and leaf tissue.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <div
+                                    class="w-full h-80 bg-gray-100 rounded-3xl flex items-center justify-center border border-gray-200 shadow-inner overflow-hidden">
+                                    <img src="https://cimmyt-inc-service-portal-uat.azurewebsites.net/ServiceImages/SAGA_Seed.jpg"
+                                        alt="">
+                                </div>
+
+                                <div
+                                    class="bg-gray-50 border border-gray-100 rounded-2xl p-8 grid grid-cols-1 sm:grid-cols-2 gap-8 text-sm">
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Pricing</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Tissue processing and CTAB based DNA extraction; 2.0 USD/sample
+                                        </p>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <h3 class="text-lg font-bold text-gray-950">Turnaround time</h3>
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Results will be delivered on the platform within 1-2 weeks from the start of
+                                            sample processing.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                    <a href="#" class="btn btn-warning btn-lg">
+                                        Place order now
+                                    </a>
+                                    <a href="service-categories.html" class="btn btn-info btn-lg">
+                                        Find out more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+    </main>
+    <footer class="bg-cimmyt-blue text-white p-10">
+        <nav aria-label="Enlaces corporativos">
+            <ul class="flex gap-4 place-content-center">
+                <li><a href="#">Privacidad</a></li>
+                <li>|</li>
+                <li>Copyright © 2026 CIMMYT Inc. All rights reserved.</li>
+                <li>|</li>
+                <li>Version 2.0.0</li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

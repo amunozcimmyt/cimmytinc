@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>CIMMYT Inc Service Portal</title>
+</head>
+
+<body>
+    <header class="grid grid-cols-3 bg-white p-4">
+        <div class="logo">
+            <img class="h-16" src="img/CIMMYTIncincolor.png" alt="">
+        </div>
+        <nav>
+            <ul class="flex items-center h-16 space-x-8">
+
+                <li>
+                    <a href="home-nologin.html" class="btn-menu-header">Home</a>
+                </li>
+                <li>
+                    <a href="services-brochure-nologin.html" class="btn-menu-header">Service Brochure</a>
+                </li>
+                <li>
+                    <a href="service-categories-nologin.html" class="btn-menu-header">Service Categories</a>
+                </li>
+                <li>
+                    <a href="contact-us-nologin.html" class="btn-menu-header">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="">
+            <div class="flex-1 flex justify-end items-center gap-4">
+                <a href="login.html" class="btn btn-info btn-lg">
+                    Log In
+                </a>
+                <a href="register.html" class="btn btn-warning btn-lg">
+                    Register
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="flex flex-col w-full">
+        <section class="flex flex-col w-full">
+            <div class="max-w-7xl mx-auto py-12 px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+                    <div class="lg:col-span-5 space-y-12">
+                        <div>
+                            <h1 class="text-4xl font-black text-gray-900 uppercase tracking-tight mb-2">
+                                Contact <span class="text-cimmyt-green">Us</span>
+                            </h1>
+                            <div class="h-1 w-20 bg-cimmyt-gold rounded-full"></div>
+                        </div>
+
+                        <div class="space-y-10">
+                            <div class="flex gap-5">
+                                <div
+                                    class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-cimmyt-green shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-black text-cimmyt-blue uppercase tracking-wider mb-2">CIMMYT
+                                        global headquarters</h4>
+                                    <address class="not-italic text-gray-500 leading-relaxed">
+                                        Carretera Mexico-Veracruz, Km. 45, El Batan<br>
+                                        56237 Texcoco, <span class="font-bold text-gray-700">MEXICO</span>
+                                    </address>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-5">
+                                <div
+                                    class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-cimmyt-green shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-black text-cimmyt-blue uppercase tracking-wider mb-2">Email
+                                    </h4>
+                                    <p class="text-gray-500">General enquiries:
+                                        <a href="mailto:cimmyt-inc@cimmyt.org"
+                                            class="text-cimmyt-green font-bold hover:underline">cimmyt-inc@cimmyt.org</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-5">
+                                <div
+                                    class="w-12 h-12 bg-green-50 rounded-2xl flex items-center justify-center text-cimmyt-green shrink-0">
+                                    <i data-lucide="mailbox" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-black text-cimmyt-blue uppercase tracking-wider mb-2">Postal
+                                        address</h4>
+                                    <address class="not-italic text-gray-500 leading-relaxed">
+                                        Apartado Postal 041<br>
+                                        C.A.P. Plaza Galerias, Col. Veronica Anzures<br>
+                                        11300 Ciudad de Mexico, <span class="font-bold text-gray-700">MEXICO</span>
+                                    </address>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:flex lg:col-span-1 justify-center self-stretch">
+                        <div class="w-px bg-gray-100 h-full"></div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl">
+                        <div class="mb-8">
+                            <p class="text-cimmyt-blue font-bold text-lg leading-snug">
+                                If you have any questions or would like to contact the CIMMYT Inc team, please submit
+                                your message below.
+                            </p>
+                        </div>
+
+                        <form novalidate class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">First Name</label>
+                                    <input type="text" formcontrolname="firstName" class="form-input-portal"
+                                        placeholder="Jane">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">Last Name</label>
+                                    <input type="text" formcontrolname="lastName" class="form-input-portal"
+                                        placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">Email</label>
+                                    <input type="email" formcontrolname="email" class="form-input-portal"
+                                        placeholder="jane.doe@example.com">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-gray-400 uppercase ml-1">Organization</label>
+                                    <input type="text" formcontrolname="organisation" class="form-input-portal"
+                                        placeholder="Institution name">
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-400 uppercase ml-1">Subject</label>
+                                <input type="text" formcontrolname="subject" class="form-input-portal"
+                                    placeholder="Summarize your message">
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-400 uppercase ml-1">Message</label>
+                                <textarea formcontrolname="message" rows="4" class="form-input-portal resize-none"
+                                    placeholder="How can we help you?"></textarea>
+                                <app-length-indicator></app-length-indicator>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                                <app-custom-button buttontype="submit" class="flex-1">
+                                    <button type="button"
+                                        class="w-full py-4 bg-cimmyt-green text-white font-black rounded-xl shadow-lg hover:bg-green-800 transition-all uppercase tracking-widest text-sm">
+                                        Submit Message
+                                    </button>
+                                </app-custom-button>
+
+                                <app-custom-button buttontype="cancel" class="sm:w-32">
+                                    <button type="button"
+                                        class="w-full py-4 border-2 border-gray-100 text-gray-400 font-bold rounded-xl hover:bg-gray-50 transition-all text-sm">
+                                        Cancel
+                                    </button>
+                                </app-custom-button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-cimmyt-blue text-white p-10">
+        <nav aria-label="Enlaces corporativos">
+            <ul class="flex gap-4 place-content-center">
+                <li><a href="#">Privacidad</a></li>
+                <li>|</li>
+                <li>Copyright © 2026 CIMMYT Inc. All rights reserved.</li>
+                <li>|</li>
+                <li>Version 2.0.0</li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
