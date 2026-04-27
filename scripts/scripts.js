@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Iniciar auto-play (6 segundos como en tu original)
-    const startAutoPlay = () => interval = setInterval(nextSlide, 6000);
+    const startAutoPlay = () => interval = setInterval(nextSlide, 15000);
     const stopAutoPlay = () => clearInterval(interval);
 
     // Eventos
